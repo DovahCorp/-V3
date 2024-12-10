@@ -5,35 +5,80 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Patch Note - FᴀɪʀʏV³</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
     <style>
-        body {{
-            font-family: Arial, sans-serif;
+        body {
+            font-family: 'Roboto', sans-serif;
             margin: 20px;
-            line-height: 1.6;
-        }}
-        h1 {{
+            line-height: 1.8;
+            background-color: #f7f9fc;
+            color: #333;
+        }
+        h1 {
             color: #2c3e50;
-        }}
-        h2 {{
-            margin-top: 20px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        h2 {
             color: #34495e;
-        }}
-        ul {{
-            list-style-type: disc;
-            margin-left: 20px;
-        }}
-        pre {{
-            background-color: #f4f4f4;
-            border: 1px solid #ccc;
+            border-bottom: 2px solid #2c3e50;
+            padding-bottom: 5px;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        ul li {
+            margin: 10px 0;
             padding: 10px;
-            overflow-x: auto;
-        }}
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        a {
+            color: #3498db;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 20px 0;
+            display: flex;
+            justify-content: space-around;
+        }
+        nav ul li {
+            background-color: #2c3e50;
+            padding: 10px 15px;
+            border-radius: 5px;
+        }
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
     </style>
 </head>
 <body>
     <h1>Patch Note - FᴀɪʀʏV³</h1>
-    <h2>🌐 Location du serveur et configuration</h2>
-    <ul>
+    <nav>
+        <ul>
+            <li><a href="#server">🌐 Location du serveur</a></li>
+            <li><a href="#fivem">📂 Configuration FiveM</a></li>
+            <li><a href="#kiara">🤖 IA kIAra</a></li>
+            <li><a href="#discord">📑 Discord</a></li>
+            <li><a href="#website">🌐 Site internet</a></li>
+            <li><a href="#future">📅 Vision à long terme</a></li>
+        </ul>
+    </nav>
+    <h2 id="server" data-aos="fade-up">🌐 Location du serveur et configuration</h2>
+    <ul data-aos="fade-right">
         <li><strong>Hébergeur :</strong> EpiCore</li>
         <li><strong>Spécifications :</strong>
             <ul>
@@ -53,8 +98,8 @@
             </ul>
         </li>
     </ul>
-    <h2>📂 Installation et configuration de FiveM</h2>
-    <ul>
+    <h2 id="fivem" data-aos="fade-up">📂 Installation et configuration de FiveM</h2>
+    <ul data-aos="fade-right">
         <li><strong>Installation :</strong>
             <ul>
                 <li>Téléchargement et déploiement des fichiers nécessaires</li>
@@ -76,27 +121,31 @@
             </ul>
         </li>
     </ul>
-    <h2>🤖 Développement de l’IA kIAra</h2>
-    <ul>
+    <h2 id="kiara" data-aos="fade-up">🤖 Développement de l’IA kIAra</h2>
+    <ul data-aos="fade-right">
         <li>Automatisation de la whitelist via Discord Weedbooh (Trevor, Lester)</li>
         <li>Notifications personnalisées sur Discord concernant l’état du serveur</li>
     </ul>
-    <h2>📑 Création et organisation du Discord</h2>
-    <ul>
+    <h2 id="discord" data-aos="fade-up">📑 Création et organisation du Discord</h2>
+    <ul data-aos="fade-right">
         <li>Création d’un serveur communautaire nommé FᴀɪʀʏV³</li>
         <li>Ajout d’une whitelist pour limiter l’accès</li>
         <li>Configuration des rôles automatisés : Whitelisté, Staff, Membre</li>
     </ul>
-    <h2>🌐 Développement du site internet</h2>
-    <ul>
+    <h2 id="website" data-aos="fade-up">🌐 Développement du site internet</h2>
+    <ul data-aos="fade-right">
         <li>Référencement des patch notes, play-tests, et reviews de jeux</li>
         <li>Première version accessible via <a href="https://urls.fr/tONrPL">https://urls.fr/tONrPL</a></li>
         <li>Archivage des patch notes par mois (JSON et HTML)</li>
     </ul>
-    <h2>📅 Vision à long terme</h2>
-    <ul>
+    <h2 id="future" data-aos="fade-up">📅 Vision à long terme</h2>
+    <ul data-aos="fade-right">
         <li>Intégration de scénarios IA avancés via kIAra</li>
         <li>Ajout de nouvelles maps pour enrichir les scénarios RP</li>
     </ul>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 </html>
