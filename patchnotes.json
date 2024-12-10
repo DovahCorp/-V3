@@ -1,200 +1,70 @@
 {
     "patchNote": {
         "date": "2024-12-09",
-        "version": "1.0.3",
         "server": {
             "hostProvider": "EpiCore",
-            "updates": {
-                "resourceMigration": {
-                    "description": "Migration des ressources critiques vers des serveurs haute performance",
-                    "impact": "Réduction des latences, meilleure stabilité"
-                },
-                "loadingOptimization": {
-                    "description": "Optimisation des temps de chargement via compression et préchargement",
-                    "filesImpacted": [
-                        "textures",
-                        "maps",
-                        "scripts"
-                    ]
-                },
-                "backupAutomation": {
-                    "description": "Mise en place de sauvegardes incrémentales quotidiennes",
-                    "frequency": "Toutes les 24h",
-                    "backupLocations": [
-                        "bases de données",
-                        "scripts"
-                    ]
-                }
-            }
-        },
-        "development": {
-            "fivemServer": {
-                "features": {
-                    "systems": [
-                        {
-                            "name": "Gestion des besoins vitaux",
-                            "elements": [
-                                "faim",
-                                "soif",
-                                "carburant"
-                            ],
-                            "impact": "Ajoute une immersion réaliste au gameplay"
-                        },
-                        {
-                            "name": "PNJ interactifs",
-                            "details": {
-                                "dialogues": "Personnalisés et adaptatifs",
-                                "missions": "Générées procéduralement",
-                                "routines": "Variables selon l'heure et les joueurs présents"
-                            }
-                        }
-                    ],
-                    "jobs": [
-                        {
-                            "name": "Mécanicien de course",
-                            "minigames": [
-                                "réparations rapides",
-                                "tests de véhicules"
-                            ]
-                        },
-                        {
-                            "name": "Développeur en cybersécurité",
-                            "tasks": [
-                                "analyse de logs",
-                                "protection des systèmes"
-                            ]
-                        }
-                    ]
-                },
-                "fixes": {
-                    "spawnScripts": "Amélioration des synchronisations de spawn des joueurs",
-                    "vehicleCollisions": "Correction des bugs incohérents",
-                    "economicSystem": {
-                        "description": "Réécriture complète du module économique",
-                        "features": [
-                            "anti-exploit",
-                            "ajustements dynamiques"
-                        ]
-                    }
-                }
+            "specs": {
+                "processor": "Intel Xeon E5-2690 v3 @ 2.60GHz, 5 cœurs",
+                "memory": "16 Go DDR4 ECC",
+                "storage": "90 Go SSD",
+                "bandwidth": "750 Mb/s",
+                "location": "France"
             },
-            "aiDevelopment": {
-                "kIAra": {
-                    "userManagement": {
-                        "whitelistAutomation": {
-                            "description": "Gestion automatique des demandes de whitelist",
-                            "sync": [
-                                "FiveM",
-                                "Discord"
-                            ]
-                        },
-                        "notifications": {
-                            "type": "Personnalisées",
-                            "medium": [
-                                "Discord"
-                            ]
-                        }
-                    },
-                    "fivemScripts": {
-                        "voiceCommands": {
-                            "description": "Commandes vocales interactives pour les PNJ et l'environnement",
-                            "examples": [
-                                "Demander des informations",
-                                "Déclencher des scénarios"
-                            ]
-                        },
-                        "adaptiveAlgorithm": {
-                            "description": "Algorithme évolutif pour adapter les scénarios aux habitudes des joueurs",
-                            "impact": "Engagement accru"
-                        }
-                    },
-                    "automation": {
-                        "sanctions": {
-                            "description": "Sanctions automatiques pour comportements hors RP",
-                            "actions": [
-                                "kick",
-                                "tempban"
-                            ],
-                            "monitoring": "Analyse en temps réel des logs"
-                        },
-                        "performanceTracking": {
-                            "description": "Suivi des performances des scripts",
-                            "optimizations": [
-                                "désactivation des modules inutilisés"
-                            ]
-                        }
-                    }
-                }
-            }
+            "setup": [
+                "Mise en place d’une VM et des outils de gestion",
+                "Compression des ressources inutilisées",
+                "Automatisation des backups incrémentaux",
+                "Transfert des scripts essentiels pour réduire la latence"
+            ]
+        },
+        "fivem": {
+            "installation": [
+                "Téléchargement et déploiement des fichiers nécessaires",
+                "Configuration des ports et dépendances",
+                "Mise en place d’ESX Legacy comme base pour le serveur RP"
+            ],
+            "scripts": [
+                "Gestion des besoins vitaux (faim, soif, carburant)",
+                "Ajout de métiers RP : Mécanicien de course, Développeur en cybersécurité",
+                "Réglage de l’économie virtuelle avec anti-exploit"
+            ],
+            "testing": [
+                "Synchronisation des joueurs (bugs de spawn)",
+                "Amélioration des logs pour analyse de performance"
+            ]
+        },
+        "kIAra": {
+            "features": [
+                "Automatisation de la whitelist via Discord Weedbooh (Trevor, Lester)",
+                "Notifications personnalisées sur Discord concernant l’état du serveur"
+            ]
         },
         "discord": {
-            "organization": {
-                "channels": [
-                    {
-                        "name": "🎟️｜ᴛɪᴄᴋᴇᴛꜱ",
-                        "purpose": "Gestion des tickets support"
-                    },
-                    {
-                        "name": "🛠️｜ꜱᴜᴘᴘᴏʀᴛ",
-                        "purpose": "Assistance technique"
-                    },
-                    {
-                        "name": "📂｜ɢᴇꜱᴛɪᴏɴ",
-                        "purpose": "Gestion administrative"
-                    },
-                    {
-                        "name": "🔧｜ᴀꜱꜱɪꜱᴛᴀɴᴄᴇ",
-                        "purpose": "Aide aux utilisateurs"
-                    }
-                ],
-                "roles": {
-                    "automation": "Gestion automatique des rôles via bot",
-                    "rolesList": [
-                        "Whitelisté",
-                        "Staff",
-                        "Membre"
-                    ]
-                }
-            },
-            "features": {
-                "dashboard": {
-                    "description": "Interface graphique intégrée pour le suivi des états du serveur",
-                    "functions": [
-                        "État du serveur",
-                        "Joueurs connectés",
-                        "Événements"
-                    ]
-                },
-                "communityVote": {
-                    "description": "Système de vote pour prioriser les ajouts et modifications",
-                    "process": "Suggestions soumises et votées par la communauté"
-                },
-                "partners": {
-                    "description": "Canal dédié aux collaborations et partenariats",
-                    "examples": [
-                        "Communautés RP partenaires"
-                    ]
-                }
-            }
-        },
-        "futurePlans": {
-            "shortTerm": [
-                {
-                    "name": "Intégration de scénarios IA avancés",
-                    "tool": "kIAra"
-                },
-                {
-                    "name": "Ajout de nouvelles maps",
-                    "details": [
-                        "Lieux urbains",
-                        "Zones rurales immersives"
-                    ]
-                }
+            "setup": [
+                "Création d’un serveur communautaire nommé FᴀɪʀʏV³",
+                "Ajout d’une whitelist pour limiter l’accès"
             ],
-            "longTerm": {
-                "name": "Mise en place d'une économie blockchain",
-                "purpose": "Commerce RP sécurisé et stable"
-            }
+            "roles": [
+                "Configuration des rôles automatisés : Whitelisté, Staff, Membre"
+            ]
+        },
+        "website": {
+            "concept": [
+                "Référencement des patch notes, play-tests, et reviews de jeux"
+            ],
+            "hosting": [
+                "Envisager l’hébergement sur le serveur EpiCore",
+                "Première version accessible via https://urls.fr/tONrPL"
+            ],
+            "archive": [
+                "Archivage des patch notes par mois (JSON et HTML)"
+            ]
+        },
+        "future": {
+            "plans": [
+                "Intégration de scénarios IA avancés via kIAra",
+                "Ajout de nouvelles maps pour enrichir les scénarios RP"
+            ]
         }
     }
 }
