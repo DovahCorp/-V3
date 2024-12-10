@@ -1,57 +1,69 @@
-
 {
+  "patchNote": {
     "date": "2024-12-09",
-    "creation_du_serveur": {
-        "base_initiale": [
-            "Construction du serveur avec un mélange des frameworks ESX Legacy et OX Library, garantissant une base technique moderne et modulaire.",
-            "Cependant, cette combinaison a engendré des doublons dans certaines fonctionnalités, notamment sur les shops, boutiques, barbers, et banques, nécessitant une optimisation et une révision des scripts concernés."
-        ],
-        "structure_communautaire": [
-            "Mise en place d’un Discord officiel structuré pour la communauté, avec des rôles administratifs et modérateurs clairement définis.",
-            "Intégration de kIAra dans la régulation des accès des nouveaux joueurs, automatisant le processus de whitelist et garantissant un environnement sécurisé et organisé."
-        ]
+    "host": {
+      "provider": "EpiCore",
+      "updates": [
+        "Migration des ressources critiques vers des serveurs haute performance",
+        "Optimisation des temps de chargement via compression et préchargement",
+        "Sauvegardes automatisées des bases de données et scripts"
+      ]
     },
-    "nouveautes": {
-        "scripts_ajoutes": [
-            "Économie : Gestion des salaires, des commerces et des transactions.",
-            "Vitalité : Introduction des systèmes de faim, soif, et carburant (encore en phase de vérification pour équilibrer la consommation).",
-            "Métiers : Ouverture des premiers métiers fonctionnels : Police, EMS, Mécanicien. Autres métiers en préparation."
+    "serverDevelopment": {
+      "newFeatures": {
+        "systems": [
+          "Gestion de la faim, soif et carburant intégrée",
+          "PNJ avec routines dynamiques et missions adaptatives"
         ],
-        "business_illegal": [
-            "Ajout du premier business de drogue (cannabis) :",
-            "Culture et récolte dans des lieux spécifiques.",
-            "Transformation en produits finis prêts à être vendus.",
-            "Vente sur le marché noir, ajoutant une dimension stratégique et risquée au gameplay."
-        ],
-        "integration_de_kIAra": [
-            "Automatisation avancée dans la gestion des rôles et métiers via la base de données PHPAdmin.",
-            "Gestion des accès aux sections et catégories en fonction des autorisations, renforçant la cohérence organisationnelle."
+        "jobs": [
+          "Nouveaux métiers : Mécanicien de course, Développeur en cybersécurité",
+          "Progression avec système de points d'expérience"
         ]
+      },
+      "fixes": [
+        "Amélioration des scripts de spawn pour synchronisation des joueurs",
+        "Correction des collisions physiques pour les véhicules",
+        "Réécriture du module économique pour plus de stabilité"
+      ]
     },
-    "ameliorations": {
-        "optimisation_technique": [
-            "Stabilisation des scripts principaux pour éviter les conflits et doublons.",
-            "Réduction des latences en zones densément peuplées et amélioration de la fluidité globale des interactions."
+    "aiDevelopment": {
+      "kIAra": {
+        "userManagement": [
+          "Automatisation de la whitelist",
+          "Notifications personnalisées via Discord"
+        ],
+        "fivemScripts": [
+          "Commandes vocales pour interactions avec PNJ et environnement",
+          "Algorithme adaptatif pour proposer des scénarios engageants"
+        ],
+        "automation": [
+          "Sanctions automatiques pour comportements hors RP",
+          "Suivi des performances des scripts"
         ]
+      }
     },
-    "correctifs": {
-        "sauvegarde_vehicules": [
-            "Résolution du bug empêchant la sauvegarde correcte des véhicules des joueurs."
+    "discordDevelopment": {
+      "organization": {
+        "channelNames": [
+          "🎟️｜ᴛɪᴄᴋᴇᴛꜱ",
+          "🛠️｜ꜱᴜᴘᴘᴏʀᴛ",
+          "📂｜ɢᴇꜱᴛɪᴏɴ",
+          "🔧｜ᴀꜱꜱɪꜱᴛᴀɴᴄᴇ"
         ],
-        "traductions_et_menus": [
-            "Problème identifié : De nombreux éléments des menus restent en anglais, ce qui nuit à l’immersion.",
-            "Plan d’action : Recherche active d’un menu alternatif pour la gestion et le changement des vêtements, afin d’améliorer l’expérience utilisateur."
-        ]
+        "roles": "Automatisation des rôles via bot pour permissions spécifiques"
+      },
+      "features": {
+        "dashboard": "Interface graphique intégrée pour suivre l'état du serveur",
+        "communityVote": "Système de vote pour prioriser les suggestions",
+        "partners": "Canal dédié aux collaborations et partenariats"
+      }
     },
-    "a_venir": {
-        "scripts_et_fonctionnalites": [
-            "Ajustement des systèmes de carburant et de vitalité pour équilibrer leur impact sur le gameplay."
-        ],
-        "traductions_completes": [
-            "Priorité à la francisation des menus et des fonctionnalités."
-        ],
-        "extension_metiers_et_organisations": [
-            "Ajout de nouveaux métiers et organisations criminelles pour diversifier les interactions RP."
-        ]
+    "futurePlans": {
+      "shortTerm": [
+        "Intégration de scénarios IA avancés via kIAra",
+        "Ajout de nouvelles maps pour enrichir l'expérience RP"
+      ],
+      "longTerm": "Mise en place d'une économie blockchain pour le commerce RP"
     }
+  }
 }
