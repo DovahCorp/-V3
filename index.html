@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -8,11 +9,14 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
     <style>
         body {
+    background: url('images/background-image.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+        body {
             font-family: 'Roboto', sans-serif;
             margin: 20px;
             line-height: 1.8;
-            background: url('images/background-image.jpg') no-repeat center center fixed;
-            background-size: cover;
+            background-color: #f7f9fc;
             color: #333;
         }
         h1 {
@@ -63,7 +67,7 @@
         nav ul li a:hover {
             text-decoration: underline;
         }
-    </style>
+    </style>    
 </head>
 <body>
     <h1>Patch Note - FᴀɪʀʏV³</h1>
@@ -77,39 +81,75 @@
             <li><a href="#future">📅 Vision à long terme</a></li>
         </ul>
     </nav>
-    <!-- Contenu inchangé -->
+    <h2 id="server" data-aos="fade-up">🌐 Location du serveur et configuration</h2>
+    <ul data-aos="fade-right">
+        <li><strong>Hébergeur :</strong> EpiCore</li>
+        <li><strong>Spécifications :</strong>
+            <ul>
+                <li>Processeur : Intel Xeon E5-2690 v3 @ 2.60GHz, 5 cœurs</li>
+                <li>Mémoire vive : 16 Go DDR4 ECC</li>
+                <li>Stockage : 90 Go SSD</li>
+                <li>Bande passante : 750 Mb/s</li>
+                <li>Localisation : France</li>
+            </ul>
+        </li>
+        <li><strong>Optimisations :</strong>
+            <ul>
+                <li>Mise en place d’une VM et des outils de gestion</li>
+                <li>Compression des ressources inutilisées</li>
+                <li>Automatisation des backups incrémentaux</li>
+                <li>Transfert des scripts essentiels pour réduire la latence</li>
+            </ul>
+        </li>
+    </ul>
+    <h2 id="fivem" data-aos="fade-up">📂 Installation et configuration de FiveM</h2>
+    <ul data-aos="fade-right">
+        <li><strong>Installation :</strong>
+            <ul>
+                <li>Téléchargement et déploiement des fichiers nécessaires</li>
+                <li>Configuration des ports et dépendances</li>
+                <li>Mise en place d’ESX Legacy comme base pour le serveur RP</li>
+            </ul>
+        </li>
+        <li><strong>Scripts :</strong>
+            <ul>
+                <li>Gestion des besoins vitaux (faim, soif, carburant)</li>
+                <li>Ajout de métiers RP : Mécanicien de course, Développeur en cybersécurité</li>
+                <li>Réglage de l’économie virtuelle avec anti-exploit</li>
+            </ul>
+        </li>
+        <li><strong>Testing et correctifs :</strong>
+            <ul>
+                <li>Synchronisation des joueurs (bugs de spawn)</li>
+                <li>Amélioration des logs pour analyse de performance</li>
+            </ul>
+        </li>
+    </ul>
+    <h2 id="kiara" data-aos="fade-up">🤖 Développement de l’IA kIAra</h2>
+    <ul data-aos="fade-right">
+        <li>Automatisation de la whitelist via Discord Weedbooh (Trevor, Lester)</li>
+        <li>Notifications personnalisées sur Discord concernant l’état du serveur</li>
+    </ul>
+    <h2 id="discord" data-aos="fade-up">📑 Création et organisation du Discord</h2>
+    <ul data-aos="fade-right">
+        <li>Création d’un serveur communautaire nommé FᴀɪʀʏV³</li>
+        <li>Ajout d’une whitelist pour limiter l’accès</li>
+        <li>Configuration des rôles automatisés : Whitelisté, Staff, Membre</li>
+    </ul>
+    <h2 id="website" data-aos="fade-up">🌐 Développement du site internet</h2>
+    <ul data-aos="fade-right">
+        <li>Référencement des patch notes, play-tests, et reviews de jeux</li>
+        <li>Première version accessible via <a href="https://urls.fr/tONrPL">https://urls.fr/tONrPL</a></li>
+        <li>Archivage des patch notes par mois (JSON et HTML)</li>
+    </ul>
+    <h2 id="future" data-aos="fade-up">📅 Vision à long terme</h2>
+    <ul data-aos="fade-right">
+        <li>Intégration de scénarios IA avancés via kIAra</li>
+        <li>Ajout de nouvelles maps pour enrichir les scénarios RP</li>
+    </ul>
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
     <script>
         AOS.init();
     </script>
-    <script>
-        // Charger les données du fichier patchnotes.json
-        fetch('patchnotes.json')
-            .then(response => {
-                if (!response.ok) {
-                    throw new Error("Erreur lors du chargement du fichier JSON.");
-                }
-                return response.json();
-            })
-            .then(data => {
-                // Insérer les données dans la section appropriée
-                const container = document.createElement('div');
-                container.innerHTML = `
-                    <h2>${data.patchNote.date}</h2>
-                    <h3>🌐 Hébergement</h3>
-                    <ul>
-                        <li><strong>Processeur :</strong> ${data.patchNote.server.specs.processor}</li>
-                        <li><strong>Mémoire vive :</strong> ${data.patchNote.server.specs.memory}</li>
-                        <li><strong>Stockage :</strong> ${data.patchNote.server.specs.storage}</li>
-                        <li><strong>Bande passante :</strong> ${data.patchNote.server.specs.bandwidth}</li>
-                        <li><strong>Localisation :</strong> ${data.patchNote.server.specs.location}</li>
-                    </ul>
-                `;
-                document.body.appendChild(container);
-            })
-            .catch(error => {
-                console.error('Erreur lors du chargement du JSON :', error);
-            });
-    </script>   
 </body>
 </html>
