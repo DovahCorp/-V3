@@ -82,5 +82,34 @@
     <script>
         AOS.init();
     </script>
+    <script>
+        // Charger les données du fichier patchnotes.json
+        fetch('patchnotes.json')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error("Erreur lors du chargement du fichier JSON.");
+                }
+                return response.json();
+            })
+            .then(data => {
+                // Insérer les données dans la section appropriée
+                const container = document.createElement('div');
+                container.innerHTML = `
+                    <h2>${data.patchNote.date}</h2>
+                    <h3>🌐 Hébergement</h3>
+                    <ul>
+                        <li><strong>Processeur :</strong> ${data.patchNote.server.specs.processor}</li>
+                        <li><strong>Mémoire vive :</strong> ${data.patchNote.server.specs.memory}</li>
+                        <li><strong>Stockage :</strong> ${data.patchNote.server.specs.storage}</li>
+                        <li><strong>Bande passante :</strong> ${data.patchNote.server.specs.bandwidth}</li>
+                        <li><strong>Localisation :</strong> ${data.patchNote.server.specs.location}</li>
+                    </ul>
+                `;
+                document.body.appendChild(container);
+            })
+            .catch(error => {
+                console.error('Erreur lors du chargement du JSON :', error);
+            });
+    </script>   
 </body>
 </html>
